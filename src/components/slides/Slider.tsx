@@ -16,7 +16,9 @@ const Slider: React.FC<sliderProps> = (props) => {
         <img src={props.img} alt={props.alt} style={{ margin: "1rem auto" }} />
       </IonItem>
 
-      <IonCardTitle className="title">{props.title}</IonCardTitle>
+      <IonCardTitle className="title ion-text-center">
+        {props.title}
+      </IonCardTitle>
       <IonCardContent
         className="ion-text-center"
         style={{ marginBottom: "0.9rem" }}

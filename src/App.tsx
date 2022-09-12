@@ -58,16 +58,14 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
+            <Route render={() => <p>Página não encontrada!</p>} />
+
             <Route exact path="/login">
               <Login />
             </Route>
-            <Route
-              exact
-              path="/registrar"
-              render={() => {
-                return IsAuth ? <Register /> : <Redirect to="/login" />;
-              }}
-            ></Route>
+            <Route exact path="/registrar">
+              <Register />
+            </Route>
             <Route
               exact
               path="/home"

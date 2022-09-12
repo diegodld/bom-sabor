@@ -4,7 +4,6 @@ import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import "./theme/global.css";
-import { BrowserRouter } from "react-router-dom";
 import { GlobalContextProvider } from "./contexts/GlobalContext";
 import { AuthContextProvider } from "./contexts/AuthContext";
 
@@ -12,13 +11,11 @@ const container = document.getElementById("root");
 const root = createRoot(container!);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <GlobalContextProvider>
-        <AuthContextProvider>
-          <App />
-        </AuthContextProvider>
-      </GlobalContextProvider>
-    </BrowserRouter>
+    <GlobalContextProvider>
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
+    </GlobalContextProvider>
   </React.StrictMode>
 );
 
