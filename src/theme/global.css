@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:wght@500&display=swap");
+* :not(ion-icon) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+ion-button {
+  text-transform: none;
+  color: #fff;
+  --background: linear-gradient(274.2deg, #ec6160 12.47%, #fe7d57 87.75%);
+  margin: 1rem;
+  font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+}
+
+.gradient {
+  --background: linear-gradient(274.2deg, #ec6160 12.47%, #fe7d57 87.75%);
+  background: linear-gradient(274.2deg, #ec6160 12.47%, #fe7d57 87.75%);
+}
+
+.title {
+  font-size: 2rem;
+  font-family: "Montserrat";
+  text-align: start;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+.text-gray-sm {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-gray-1);
+}
+
+.gray-1 {
+  color: var(--color-gray-1);
+}
+
+.no-shadow {
+  box-shadow: none;
+  border: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--ion-color-primary);
+  width: 20px;
+  border-radius: 4px;
+  margin: 2rem;
+}
+
+.mgb-1 {
+  margin-bottom: 1rem;
+}
+
+.mgb-2 {
+  margin-bottom: 2rem;
+}
