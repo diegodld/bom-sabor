@@ -23,8 +23,8 @@ const VerifyPhoneNumber = (props: Props) => {
         <IonButtons slot="start">
           <IonBackButton defaultHref="/recuperar-senha" icon={arrowBack} />
         </IonButtons>
-        <IonTitle className="subtitle ion-text-center ion-margin">
-          Esqueceu sua senha?
+        <IonTitle className="subtitle ion-margin">
+          Verificar número de telefone.
         </IonTitle>
       </IonToolbar>
 

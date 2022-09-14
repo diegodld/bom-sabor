@@ -23,9 +23,7 @@ const ForgotPassword = (props: Props) => {
         <IonButtons slot="start">
           <IonBackButton defaultHref="/login" icon={arrowBack} />
         </IonButtons>
-        <IonTitle className="subtitle ion-text-center ion-margin">
-          Esqueceu sua senha?
-        </IonTitle>
+        <IonTitle className="subtitle ion-margin">Esqueceu sua senha?</IonTitle>
       </IonToolbar>
 
       <IonContent fullscreen>
