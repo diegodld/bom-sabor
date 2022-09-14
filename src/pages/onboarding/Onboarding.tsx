@@ -1,6 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useHistory } from "react-router-dom";
 
 import SwiperCore, {
   Navigation,
@@ -10,7 +9,6 @@ import SwiperCore, {
   Swiper as SwiperInterface,
 } from "swiper";
 
-import Slider from "../slides/Slider";
 import smartphone from "../../assets/ilustrations/smartphone.svg";
 import bike from "../../assets/ilustrations/bike.svg";
 import books from "../../assets/ilustrations/books.svg";
@@ -19,6 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { IonButton, IonContent, IonToolbar } from "@ionic/react";
+import Slider from "../../components/slides/Slider";
 
 type Props = {};
 

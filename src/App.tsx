@@ -41,7 +41,7 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
-import Onboarding from "./components/onboarding/Onboarding";
+import Onboarding from "./pages/onboarding/Onboarding";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import { AuthContext } from "./contexts/AuthContext";

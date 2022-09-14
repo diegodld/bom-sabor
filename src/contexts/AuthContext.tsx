@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  ReactNode,
-  SetStateAction,
-  useState,
-  Dispatch,
-} from "react";
+import React, { createContext, ReactNode, useState } from "react";
 
 const initialValue = {
   IsAuth: false,
@@ -22,9 +16,6 @@ export const AuthContextProvider: React.FC<AuthContextProps> = ({
 }) => {
   const [login, setLogin] = useState<boolean>(false);
 
-  function handleAuth(value: boolean) {
-    setLogin(value);
-  }
   return (
     <AuthContext.Provider value={{ IsAuth: login, setLogin: setLogin }}>
       {children}
