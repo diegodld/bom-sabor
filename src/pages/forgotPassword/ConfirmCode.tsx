@@ -21,13 +21,16 @@ const ConfirmCode = (props: Props) => {
   return (
     <IonPage>
       <IonToolbar>
-        <IonButtons slot="start">
-          <IonBackButton defaultHref="recuperar-senha" icon={arrowBack} />
-        </IonButtons>
-        <IonTitle className="subtitle ion-margin">
-          {" "}
-          Verificar número de telefone.
-        </IonTitle>
+        <Container>
+          <span style={{ display: "flex" }}>
+            <IonButtons slot="start">
+              <IonBackButton defaultHref="/recuperar-senha" icon={arrowBack} />
+            </IonButtons>
+            <IonTitle className="subtitle ion-margin">
+              Verificar número de telefone.
+            </IonTitle>
+          </span>
+        </Container>
       </IonToolbar>
 
       <IonContent fullscreen>

@@ -20,10 +20,16 @@ const ForgotPassword = (props: Props) => {
   return (
     <IonPage>
       <IonToolbar>
-        <IonButtons slot="start">
-          <IonBackButton defaultHref="/login" icon={arrowBack} />
-        </IonButtons>
-        <IonTitle className="subtitle ion-margin">Esqueceu sua senha?</IonTitle>
+        <Container>
+          <span style={{ display: "flex" }}>
+            <IonButtons slot="start">
+              <IonBackButton defaultHref="/login" icon={arrowBack} />
+            </IonButtons>
+            <IonTitle className="subtitle ion-margin">
+              Esqueceu sua senha?
+            </IonTitle>
+          </span>
+        </Container>
       </IonToolbar>
 
       <IonContent fullscreen>
