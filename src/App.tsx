@@ -48,6 +48,7 @@ import { AuthContext } from "./contexts/AuthContext";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import VerifyPhoneNumber from "./pages/forgotPassword/VerifyPhoneNumber";
 import ConfirmCode from "./pages/forgotPassword/ConfirmCode";
+import ResetPassword from "./pages/resetPassword/ResetPassword";
 
 setupIonicReact();
 
@@ -79,6 +80,9 @@ const App: React.FC = () => {
             </Route>
             <Route exact path="/recuperar-senha/verificar-numero/confirm">
               <ConfirmCode />
+            </Route>
+            <Route exact path="/recuperar-senha/resetar-senha">
+              <ResetPassword />
             </Route>
             <Route
               exact

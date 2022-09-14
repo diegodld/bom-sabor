@@ -16,7 +16,7 @@ import Container from "../../components/container/Container";
 
 type Props = {};
 
-const ForgotPassword: React.FC = (props: Props) => {
+const ResetPassword: React.FC = (props: Props) => {
   return (
     <IonPage>
       <IonToolbar>
@@ -26,7 +26,7 @@ const ForgotPassword: React.FC = (props: Props) => {
               <IonBackButton defaultHref="/login" icon={arrowBack} />
             </IonButtons>
             <IonTitle className="subtitle ion-margin">
-              Esqueceu sua senha?
+              Criar uma nova senha
             </IonTitle>
           </div>
         </Container>
@@ -35,23 +35,31 @@ const ForgotPassword: React.FC = (props: Props) => {
       <IonContent fullscreen>
         <Container>
           <IonItem lines="none" className="text-gray-sm mgb-2">
-            Preencha o campo abaixo com seu email. Você irá receber um link para
-            criar uma nova senha.
+            Insira uma nova senha e confirme.
           </IonItem>
           <IonItem className="mgb-2">
-            <IonLabel position="stacked">EMAIL</IonLabel>
+            <IonLabel position="stacked">NOVA SENHA</IonLabel>
             <IonInput
-              placeholder="Digite seu email"
-              type="email"
-              name="email"
+              placeholder="Digite a nova senha"
+              type="password"
+              name="password"
               required
             />
           </IonItem>
-          <IonButton expand="block">Enviar</IonButton>
+          <IonItem className="mgb-2">
+            <IonLabel position="stacked">CONFIRMAR SENHA</IonLabel>
+            <IonInput
+              placeholder="Confirme a nova senha"
+              type="password"
+              name="password"
+              required
+            />
+          </IonItem>
+          <IonButton expand="block">Resetar Senha</IonButton>
         </Container>
       </IonContent>
     </IonPage>
   );
 };
 
-export default ForgotPassword;
+export default ResetPassword;

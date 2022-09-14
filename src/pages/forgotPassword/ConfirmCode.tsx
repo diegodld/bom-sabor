@@ -6,30 +6,28 @@ import {
   IonContent,
   IonInput,
   IonItem,
-  IonLabel,
   IonPage,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import { arrowBack } from "ionicons/icons";
 import Container from "../../components/container/Container";
-import brazil from "../../assets/brazilFlag.svg";
 import "./style.css";
 type Props = {};
 
-const ConfirmCode = (props: Props) => {
+const ConfirmCode: React.FC = (props: Props) => {
   return (
     <IonPage>
       <IonToolbar>
         <Container>
-          <span style={{ display: "flex" }}>
+          <div className="flex-row">
             <IonButtons slot="start">
               <IonBackButton defaultHref="/recuperar-senha" icon={arrowBack} />
             </IonButtons>
             <IonTitle className="subtitle ion-margin">
               Verificar número de telefone.
             </IonTitle>
-          </span>
+          </div>
         </Container>
       </IonToolbar>
 
@@ -39,21 +37,21 @@ const ConfirmCode = (props: Props) => {
             Insira o código nos campos abaixo.
           </IonItem>
           <IonItem lines="none">
-            <span className="mgb-2" style={{ display: "flex" }}>
+            <div className="flex-row mgb-2">
               <IonInput className="input-border" maxlength={1} />
               <IonInput className="input-border" maxlength={1} />
               <IonInput className="input-border" maxlength={1} />
               <IonInput className="input-border" maxlength={1} />
               <IonInput className="input-border" maxlength={1} />
-            </span>
+            </div>
           </IonItem>
           <IonItem className="mgb-1" lines="none">
-            <span>
+            <div>
               <span className="text-gray-sm">Não recebeu o código? </span>
               <span style={{ color: "var(--ion-color-primary)" }}>
                 Reenviar.
               </span>
-            </span>
+            </div>
           </IonItem>
           <IonButton
             routerLink="/recuperar-senha/verificar-numero/confirm"
