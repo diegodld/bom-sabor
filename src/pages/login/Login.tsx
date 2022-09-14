@@ -79,7 +79,7 @@ const Login: React.FC = (props: Props) => {
           </IonItem>
           <IonItem lines="none">
             <IonLabel className="ion-text-end ">
-              <NavLink to="/registrar" color="primary">
+              <NavLink to="/recuperar-senha" color="primary">
                 Esqueceu a senha?
               </NavLink>
             </IonLabel>

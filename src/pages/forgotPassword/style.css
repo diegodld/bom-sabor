@@ -1,0 +1,8 @@
+.input-border {
+  width: 3.5rem;
+  border: 1px solid var(--ion-color-secondary);
+  border-radius: 4px;
+  margin-right: 0.25rem;
+  text-align: center;
+  font-size: 1.5rem;
+}

@@ -45,6 +45,9 @@ import Onboarding from "./pages/onboarding/Onboarding";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import { AuthContext } from "./contexts/AuthContext";
+import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
+import VerifyPhoneNumber from "./pages/forgotPassword/VerifyPhoneNumber";
+import ConfirmCode from "./pages/forgotPassword/ConfirmCode";
 
 setupIonicReact();
 
@@ -67,6 +70,15 @@ const App: React.FC = () => {
 
             <Route exact path="/registrar">
               <Register />
+            </Route>
+            <Route exact path="/recuperar-senha">
+              <ForgotPassword />
+            </Route>
+            <Route exact path="/recuperar-senha/verificar-numero">
+              <VerifyPhoneNumber />
+            </Route>
+            <Route exact path="/recuperar-senha/verificar-numero/confirm">
+              <ConfirmCode />
             </Route>
             <Route
               exact
