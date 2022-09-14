@@ -49,6 +49,7 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import VerifyPhoneNumber from "./pages/forgotPassword/VerifyPhoneNumber";
 import ConfirmCode from "./pages/forgotPassword/ConfirmCode";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
+import SuccessModalNewPassword from "./components/modal/SuccessNewPassword";
 
 setupIonicReact();
 
@@ -83,6 +84,9 @@ const App: React.FC = () => {
             </Route>
             <Route exact path="/recuperar-senha/resetar-senha">
               <ResetPassword />
+            </Route>
+            <Route exact path="/recuperar-senha/resetar-senha/confirm">
+              <SuccessModalNewPassword />
             </Route>
             <Route
               exact
