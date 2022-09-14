@@ -12,6 +12,10 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 const Profile: React.FC = () => {
   const { setLogin } = React.useContext(AuthContext);
+  function handleLogout() {
+    setLogin(false);
+    window.location.href = "/login";
+  }
   return (
     <IonPage>
       <IonHeader>
@@ -21,7 +25,7 @@ const Profile: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <ExploreContainer name="Perfil" />
-        <IonButton onClick={() => setLogin(false)}>Logout</IonButton>
+        <IonButton onClick={handleLogout}>Logout</IonButton>
       </IonContent>
     </IonPage>
   );

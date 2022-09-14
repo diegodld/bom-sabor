@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route, useLocation } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 
 import {
   IonApp,
@@ -10,7 +10,6 @@ import {
   IonTabButton,
   IonTabs,
   setupIonicReact,
-  useIonRouter,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import {
@@ -45,13 +44,11 @@ import "./theme/variables.css";
 import Onboarding from "./components/onboarding/Onboarding";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-import { RootContext } from "./contexts/GlobalContext";
 import { AuthContext } from "./contexts/AuthContext";
 
 setupIonicReact();
 
 const App: React.FC = () => {
-  const { display } = React.useContext(RootContext);
   const { IsAuth } = React.useContext(AuthContext);
   return (
     <IonApp>
@@ -60,9 +57,14 @@ const App: React.FC = () => {
           <IonRouterOutlet>
             <Route render={() => <p>Página não encontrada!</p>} />
 
-            <Route exact path="/login">
-              <Login />
-            </Route>
+            <Route
+              exact
+              path="/login"
+              render={() => {
+                return !IsAuth ? <Login /> : <Redirect to="/home" />;
+              }}
+            />
+
             <Route exact path="/registrar">
               <Register />
             </Route>
