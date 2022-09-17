@@ -60,7 +60,11 @@ const Register = (props: Props) => {
               required
             />
           </IonItem>
-          <IonButton expand="block" style={{ marginBottom: "0" }}>
+          <IonButton
+            onClick={() => (window.location.href = "/registrar/sucesso")}
+            expand="block"
+            style={{ marginBottom: "0" }}
+          >
             Cadastrar
           </IonButton>
           <IonItem lines="none" className="text-gray-sm mgb-2">

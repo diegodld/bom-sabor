@@ -55,7 +55,14 @@ const ResetPassword: React.FC = (props: Props) => {
               required
             />
           </IonItem>
-          <IonButton expand="block">Resetar Senha</IonButton>
+          <IonButton
+            onClick={() =>
+              (window.location.href = "/recuperar-senha/resetar-senha/sucesso")
+            }
+            expand="block"
+          >
+            Resetar Senha
+          </IonButton>
         </Container>
       </IonContent>
     </IonPage>
