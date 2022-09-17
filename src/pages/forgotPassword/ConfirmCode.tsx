@@ -54,8 +54,10 @@ const ConfirmCode: React.FC = (props: Props) => {
             </div>
           </IonItem>
           <IonButton
-            routerLink="/recuperar-senha/verificar-numero/confirm"
             expand="block"
+            onClick={() =>
+              (window.location.href = "/recuperar-senha/resetar-senha")
+            }
           >
             Verificar
           </IonButton>

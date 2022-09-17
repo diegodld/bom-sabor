@@ -13,6 +13,7 @@ import {
   IonInput,
 } from "@ionic/react";
 import { OverlayEventDetail } from "@ionic/core/components";
+import Container from "../container/Container";
 
 function SuccessModalNewPassword() {
   const modal = useRef<HTMLIonModalElement>(null);
@@ -40,35 +41,42 @@ function SuccessModalNewPassword() {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonButton id="open-modal" expand="block">
-          Open
-        </IonButton>
-        <p>{message}</p>
-        <IonModal
-          ref={modal}
-          trigger="open-modal"
-          onWillDismiss={(ev) => onWillDismiss(ev)}
-        >
-          <IonHeader>
-            <IonToolbar>
-              <IonButtons slot="start">
-                <IonButton onClick={() => modal.current?.dismiss()}>
-                  Cancel
-                </IonButton>
-              </IonButtons>
-              <IonTitle>Welcome</IonTitle>
-              <IonButtons slot="end">
-                <IonButton onClick={() => confirm()}>Confirm</IonButton>
-              </IonButtons>
-            </IonToolbar>
-          </IonHeader>
-          <IonContent className="ion-padding">
-            <IonItem>
-              <IonLabel position="stacked">Enter your name</IonLabel>
-              <IonInput ref={input} type="text" placeholder="Your name" />
-            </IonItem>
-          </IonContent>
-        </IonModal>
+        <Container>
+          <IonButton id="open-modal" expand="block">
+            Open
+          </IonButton>
+          <p>{message}</p>
+          <IonModal
+            ref={modal}
+            trigger="open-modal"
+            onWillDismiss={(ev) => onWillDismiss(ev)}
+          >
+            <IonHeader>
+              <IonToolbar>
+                <IonButtons slot="start">
+                  <IonButton
+                    color="dark"
+                    onClick={() => modal.current?.dismiss()}
+                  >
+                    Cancel
+                  </IonButton>
+                </IonButtons>
+                <IonTitle>Welcome</IonTitle>
+                <IonButtons slot="end">
+                  <IonButton color="dark" onClick={() => confirm()}>
+                    Confirm
+                  </IonButton>
+                </IonButtons>
+              </IonToolbar>
+            </IonHeader>
+            <IonContent className="ion-padding">
+              <IonItem>
+                <IonLabel position="stacked">Enter your name</IonLabel>
+                <IonInput ref={input} type="text" placeholder="Your name" />
+              </IonItem>
+            </IonContent>
+          </IonModal>
+        </Container>
       </IonContent>
     </IonPage>
   );

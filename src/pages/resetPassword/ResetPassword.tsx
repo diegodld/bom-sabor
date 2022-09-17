@@ -23,7 +23,7 @@ const ResetPassword: React.FC = (props: Props) => {
         <Container>
           <div className="flex-row">
             <IonButtons slot="start">
-              <IonBackButton defaultHref="/login" icon={arrowBack} />
+              <IonBackButton defaultHref="/recuperar-senha" icon={arrowBack} />
             </IonButtons>
             <IonTitle className="subtitle ion-margin">
               Criar uma nova senha

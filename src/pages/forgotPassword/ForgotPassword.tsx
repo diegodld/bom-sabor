@@ -1,4 +1,5 @@
 import {
+  IonAlert,
   IonBackButton,
   IonButton,
   IonButtons,
@@ -9,6 +10,7 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  useIonAlert,
 } from "@ionic/react";
 import { arrowBack } from "ionicons/icons";
 import React from "react";
@@ -17,6 +19,20 @@ import Container from "../../components/container/Container";
 type Props = {};
 
 const ForgotPassword: React.FC = (props: Props) => {
+  const [email, setEmail] = React.useState<string>("");
+  const [presentAlert] = useIonAlert();
+  function handleEmail() {
+    if (email) {
+      window.location.href = "/recuperar-senha/verificar-numero";
+    } else {
+      presentAlert({
+        header: "Atenção",
+        message: "Insira um email",
+        buttons: ["OK"],
+      });
+    }
+  }
+
   return (
     <IonPage>
       <IonToolbar>
@@ -44,10 +60,14 @@ const ForgotPassword: React.FC = (props: Props) => {
               placeholder="Digite seu email"
               type="email"
               name="email"
+              value={email}
+              onIonChange={(e) => setEmail(e.detail.value!)}
               required
             />
           </IonItem>
-          <IonButton expand="block">Enviar</IonButton>
+          <IonButton expand="block" onClick={handleEmail}>
+            Enviar
+          </IonButton>
         </Container>
       </IonContent>
     </IonPage>
