@@ -83,3 +83,7 @@ a {
 .mgb-2 {
   margin-bottom: 2rem;
 }
+
+.active {
+  color: var(--ion-color-primary);
+}

@@ -1,16 +1,14 @@
 import React from "react";
 
 interface Props {
-  children?: JSX.Element;
-  className?: JSX.ElementClass;
+  customClass?: string;
 }
 
-const Container: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props) => {
-  return (
-    <div className="container" {...props}>
-      {props.children}
-    </div>
-  );
+const Container: React.FC<React.HTMLAttributes<HTMLDivElement> & Props> = ({
+  children,
+  customClass = "",
+}) => {
+  return <div className={"container " + customClass}>{children}</div>;
 };
 
 export default Container;

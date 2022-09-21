@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./theme/global.css";
 import { GlobalContextProvider } from "./contexts/GlobalContext";
 import { AuthContextProvider } from "./contexts/AuthContext";
+import { BrowserRouter } from "react-router-dom";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <GlobalContextProvider>
       <AuthContextProvider>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </AuthContextProvider>
     </GlobalContextProvider>
   </React.StrictMode>

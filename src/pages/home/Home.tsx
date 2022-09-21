@@ -10,6 +10,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
+import Categories from "../../components/categories/Categories";
 import Container from "../../components/container/Container";
 import ProfileAvatar from "../../components/ProfileAvatar/ProfileAvatar";
 
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
           <div className="header-container">
             <ProfileAvatar />
           </div>
+          <Categories />
         </Container>
       </IonContent>
     </IonPage>
