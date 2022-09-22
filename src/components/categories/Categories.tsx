@@ -47,6 +47,20 @@ const Categories = (props: Props) => {
             <p>Salgados</p>
           </div>
         </Link>
+        <Link to="/perfil">
+          <div className="square-container">
+            <IonImg src={salgados} className="mgb-2" />
+
+            <p>Salgados</p>
+          </div>
+        </Link>
+        <Link to="/perfil">
+          <div className="square-container">
+            <IonImg src={salgados} className="mgb-2" />
+
+            <p>Salgados</p>
+          </div>
+        </Link>
       </div>
     </Container>
   );
