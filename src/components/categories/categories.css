@@ -5,7 +5,6 @@
   top: calc(180px - 36.5px);
   display: flex;
   overflow-x: auto;
-  box-sizing: initial;
 }
 
 .categories-container ::-webkit-scrollbar {
